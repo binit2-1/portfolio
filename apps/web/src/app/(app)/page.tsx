@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
-   <div>
-     Hi
+   <div className="max-w-[800px] w-full h-full">
+     hi
    </div>
   );
 }
