@@ -24,7 +24,7 @@ const satoshi = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-satoshi", 
+  variable: "--font-satoshi",
   display: "swap",
 });
 
@@ -41,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased relative `}
       >
-        {children}
+        <div className="relative h-screen w-screen bg-white bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] bg-size-[164px_164px] after:absolute after:inset-0 after:bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] after:bg-size-[164px_164px] bg-position-[16px_0px,0px_16px] bg-repeat">
+          {children}
+        </div>
       </body>
     </html>
   );
