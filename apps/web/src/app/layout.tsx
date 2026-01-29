@@ -43,8 +43,8 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased relative `}
       >
-        <div className="relative flex flex-col items-center inset-0 h-screen w-screen bg-white bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] bg-size-[164px_164px] after:absolute after:inset-0 after:bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] after:bg-size-[164px_164px] bg-position-[-20px_0px,0px_-20px] after:bg-position-[-40px_0px,0px_-40px]">
-          {children}
+        <div className="relative flex flex-col items-center inset-0 h-screen w-screen bg-white bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] bg-size-[164px_164px] after:absolute after:inset-0 after:bg-[linear-gradient(to_right,#ff580060_1px,transparent_1px),linear-gradient(to_bottom,#ff580060_1px,transparent_1px)] after:bg-size-[164px_164px] bg-position-[-16px_0px,0px_-16px] after:bg-position-[-31.5px_0px,0px_-31.5px] after:pointer-events-none">
+          <div className="relative z-10 w-full flex items-center justify-center">{children}</div>
         </div>
       </body>
     </html>

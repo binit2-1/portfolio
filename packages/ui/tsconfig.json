@@ -29,6 +29,6 @@
     "jsx": "react-jsx",
     "declarationMap": true
   },
-  "include": ["src"],
+  "include": ["src", "src/components/navbar.tsx"],
   "exclude": ["node_modules", "dist"]
 }
