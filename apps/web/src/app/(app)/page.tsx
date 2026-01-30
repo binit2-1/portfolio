@@ -1,6 +1,7 @@
 import { AboutDesc, AboutHeading } from "@/components/sections/about";
-import { Navbar } from "../../components/ui/navbar";
-import { StackHeading } from "@/components/sections/stack";
+import { Navbar } from "@/components/ui/navbar";
+import { StackHeading, StackLogos } from "@/components/sections/stack";
+
 
 
 export default function HomePage() {
@@ -21,8 +22,8 @@ export default function HomePage() {
       <section className="h-37.5 w-full mt-3.5">
         <StackHeading />
       </section>
-      <section className="bg-red-500 h-37.5 w-full mt-3.5">
-        {/* Placeholder for future content */}
+      <section className=" h-37.5 w-full mt-2">
+        <StackLogos />
       </section>
     </main>
   );
