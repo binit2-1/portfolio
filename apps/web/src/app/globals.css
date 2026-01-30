@@ -25,6 +25,7 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) + 4px);
+    --swiss-grid-color: white;
 }
 
 @layer base {
@@ -83,6 +84,31 @@
         @apply bg-background text-foreground;
         /* This ensures your font is used everywhere */
         font-family: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .swiss-grid {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        inset: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        background-image: linear-gradient(to right, var(--swiss-grid-color) 1px, transparent 1px), linear-gradient(to bottom, var(--swiss-grid-color) 1px, transparent 1px);
+        background-size: 164px 164px;
+        background-position: -16px 0px,0px -16px;
+    }
+
+    .swiss-grid::after{
+        content:" ";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(to right,var(--swiss-grid-color) 1px,transparent 1px),linear-gradient(to bottom,var(--swiss-grid-color) 1px,transparent 1px);
+        background-size: 164px 164px;
+        background-position: -31.5px 0px,0px -31.5px;
+        pointer-events: none;
+        aspect-ratio: 1 / 1;
     }
 }
 
